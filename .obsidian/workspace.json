@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "a014629bd849e907",
+    "type": "split",
+    "children": [
+      {
+        "id": "2439a2e97f85e330",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff05d820d6d79211",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chapter 7 IO Organisation.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapter 7 IO Organisation"
+            }
+          },
+          {
+            "id": "e9929eb6f7396f0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chapter 4 Pipeline and Vector Processing.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chapter 4 Pipeline and Vector Processing"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e7ad732082930200",
+    "type": "split",
+    "children": [
+      {
+        "id": "293dc68e61450183",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c5cbfe47d8a69cbd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8612925f11c1593b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "94f366c00bb7a7f2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 212.5
+  },
+  "right": {
+    "id": "29636420013bbf70",
+    "type": "split",
+    "children": [
+      {
+        "id": "feb201da593db36c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b73d2cae1aeec0fa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Chapter 8 Multiprocessors.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Chapter 8 Multiprocessors"
+            }
+          },
+          {
+            "id": "964c478b82fe8fab",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "COA/Chapter 1.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Chapter 1"
+            }
+          },
+          {
+            "id": "3780deb8095280f7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "09f14f250fecb11a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Chapter 4 Pipeline and Vector Processing.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Chapter 4 Pipeline and Vector Processing"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "e9929eb6f7396f0f",
+  "lastOpenFiles": [
+    "Chapter 3 Control Unit.md",
+    "Chapter 2.md",
+    "Chapter 4 Pipeline and Vector Processing.md",
+    "Chapter 8 Multiprocessors.md",
+    "lu4764dqby.tmp",
+    "Images/chapter-8/crossbar_block.png",
+    "Chapter 8 Multiprocessors.odt",
+    "Images/chapter-8/hypercube_structure_123.png",
+    "Images/chapter-8/omega_switching_network.png",
+    "Images/chapter-8/tree_101.png",
+    "Images/chapter-8/multistage_switching_block.png",
+    "Images/chapter-8/crossbar_switch.png",
+    "Images/chapter-8/multiport_memory_org.png",
+    "Images/chapter-8/time_shared_local_and_system_bus.png",
+    "Images/chapter-8",
+    "Images/chapter-8/time_shared_single_bus.png",
+    "Chapter 7 IO Organisation.md",
+    "Images/chapter-7/cpu_iop_communication.png",
+    "Images/chapter-7",
+    "Images/chapter-6/Untitled",
+    "Untitled",
+    "Chapter 6 Memory System.md",
+    "Images/chapter-6",
+    "Images/chapter-5 (Copy)",
+    "Images/chapter-5",
+    "Images/chapter-4",
+    "Chapter 1.md",
+    "memory.md",
+    "Welcome.md",
+    "Chapter1.md",
+    "COA/Images/Untitled.canvas",
+    "create a link.md"
+  ]
+}

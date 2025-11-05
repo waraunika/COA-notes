@@ -1,0 +1,45 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "8️⃣",
+      "7️⃣",
+      "6️⃣",
+      "FabCss3",
+      "FabPage4"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "/": "LiFile",
+  "Chapter 1.md": "1️⃣",
+  "Chapter 2.md": "2️⃣",
+  "Chapter 3 Control Unit.md": "FabCss3",
+  "Chapter 4 Pipeline and Vector Processing.md": "FabPage4",
+  "Chapter 6 Memory System.md": "6️⃣",
+  "Chapter 7 IO Organisation.md": "7️⃣",
+  "Chapter 8 Multiprocessors.md": "8️⃣"
+}
