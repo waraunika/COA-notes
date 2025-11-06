@@ -39,7 +39,7 @@ They are:
 	- physical arrangement of bits into words
 	- not always obvious: e.g., interleaving for performance
 # 6.3 Memory Hierarchy
-![Memory Pyramid | 369][memory_pyramid.png] ![Memory Hierarchy | 325][memory_hierarchy.png]
+![[memory_pyramid.png]] ![[memory_hierarchy.png]]
 - not all accumulated information is needed by the CPU at the same time
 - so, more economical to use low-cost storage devices to serve as a backup for storing the information that isn't currently used by PCU
 - memory unit that directly communicates with CPU is called the main memory
@@ -117,8 +117,8 @@ They are:
 8. on a cache miss, the required block is transferred from main memory into cache,
 	- then delivered to the processor, utilising the system bus.
 9. cache is physically positioned between the processor and main memory, interconnected via data, address and control lines.
-   ![Cache between CPU and Main Memory | 500][cache.png]
-   ![Cache Organisation | 500][cache_organisation.png]
+   ![[cache.png]]
+   ![[cache_organisation.png]]
 ## 6.5.2 Summary
 1. Speed & Cost Balance
 	1. provides near-fastest memory speed at lower cost of larger, slower memories
@@ -144,7 +144,7 @@ They are:
 	1. cache hits: no system bus traffic, direct CPU-cache transfer
 	2. Cache misses: Block transfer utilises system bus to main memory
 ## 6.5.3 Operation
-![Cache Operation | 650][cache_operation.png]
+![[cache_operation.png]]
 - CPU generates the receive address (RA) of a word to be moved (read).
 - check a block containing RA is in cache
 	- if present, get from cache (fast) and return

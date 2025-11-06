@@ -3,7 +3,7 @@
 - The overlapping of computation is made possible by associating a register with each segment in the pipeline.
 - The registers provide isolation between each segment so that each can operate on distinct data simultaneously.
 - Example of pipelining via the diagram and table:
-  ![Pipeline Processing | 600][pipelining_example.png] ![Pipeline's content of Registers | 600][pipelining_status_example.png]
+  ![[pipelining_example.png]]![[pipelining_status_example.png]]
 ## 4.1.1 Types
 - There are two major types of pipelining:
 	1. Arithmetic Pipeline
@@ -59,7 +59,7 @@ Using classic 5-stage RISC pipeline:
 	- At a higher level, it can be achieved by having a multiplicity of functional units that perform identical or different operations simultaneously.
 - A multi-functional organisation is usually associated with a complex control unit to coordinate all the activities among the various components.
 - Example: 
-  ![Processor with Multiple functional units | 500][multifunctional_units.png]
+  ![[multifunctional_units.png]]
 - Variety of ways to classify parallel processing
 	- Internal organisation of the processors
 	- Interconnection structure between processors
@@ -107,7 +107,7 @@ M. J. Flynn considers the organisation of a computer system by the number of str
 	- Each task requires processing through all 4 segments
 3. Complete Time-Space Diagram:
 		Time  →      |  1  |  2  |  3 |  4  |  5 |  6  |   7  |  8  |  9  |
-		Segment    | ----------------------------------------------------- |
+		Segment     | ------------------------------------- |
 			 S1      | T1 | T2 | T3 | T4 | T5 | T6 |      |      |      |
 			 S2      |      | T1 | T2 | T3 | T4 | T5 | T6 |      |      |
 			 S3      |      |      | T1 | T2 | T3 | T4 | T5 | T6 |      |
@@ -163,7 +163,7 @@ M. J. Flynn considers the organisation of a computer system by the number of str
 	- A and B are two fractions that represent the mantissas
 	- a and b are the exponents
 - floating point and subtraction can be performed in four segments:
-  ![Floating point addition/subtraction | 600][floating_point_addition.png]
+  ![[floating_point_addition.png]]
 - the sub-operations that are performed are:
 	1. Compare the exponents
 		- The larger exponent is chosen as the exponent of the result

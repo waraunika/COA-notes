@@ -1,13 +1,11 @@
-## 2.1 CPU Structure and Function
+### 2.1 CPU Structure and Function
 The part of the computer that performs the bulk of data processing operations is called the CPU and is the central component of a digital computer.
-
 ### 2.1.1 Components of CPU
-
 #### 2.1.1.1 Processor Unit
 - Consists of ALU, a number of registers and internal buses between register and ALU.
 - The registers communicate each other not only for direct data transfer but also while performing various micro-operations.
 - One way to organise the processor unit could be:
-		![Processor Unit | 600][processor.png]
+		![[processor.png]]
 - Here in the figure, two sets of multiplexers select register which perform input data for ALU.
 - A decoder selects the destination register by enabling its load input.
 - The function select (SELA) in ALU determines the particular operation to be performed.
@@ -38,11 +36,14 @@ The part of the computer that performs the bulk of data processing operations is
 - The outputs from control unit are:
 	- Control signal within processor: These signals causes data transfer between registers, activate ALU functions.
 	- Control signal to control bus: These are signals to memory and I/O module. All these control signals are applied directly as binary inputs to individual logic gate.
-- Figure:		![Control Unit | 600][control_unit.png]
+- Figure:		![[control_unit.png]]
 ### 2.1.2 Organisation of CPU
 #### 2.1.2.1 Processor Organisation
-![CPU with the System Bus | 340][cpu_with_system_bus.png] ![Internal Structure of the CPU | 350][internal_structure_of_cpu.png]
-				CPU with system bus                                          Internal Structure of CPU
+1. CPU with system bus 
+![[cpu_with_system_bus.png]] 
+2. Internal Structure of CPU
+  ![[internal_structure_of_cpu.png]]
+
 Components of CPU: 
 - ALU: does the actual computation or processing of data
 - CU: controls the movement of data and instructions into and out of the CPU and controls the operation of the ALU.
@@ -97,20 +98,19 @@ Components of CPU:
 	- Design issues
 		1. Operating system support in CPU
 		2. How to divide allocation of control information between CPU registers and first part of main memory (usual trade-offs apply)
-![Microprocessor Register Organisation | 600][register_organisation.png]
-
+![[register_organisation.png]]
 ### 2.1.3 Instruction Cycle
 Basic instruction cycle contains the following sub-cycles
 - fetch -read next instruction from memory into CPU
 - execute - interpret the opcode and perform the indicated operation
 - interrupt - if interrupts are enabled and one has occurred, save the current process state and service the interrupt
-![Instruction Cycles | 600][instruction_cycles.png]
-![Instruction Cycle State Diagram | 600][instruction_cycle_state_diagram.png]
+![[instruction_cycles.png]]
+![[instruction_cycle_state_diagram.png]]
 #### The Indirect Cycle
 - can be thought as another sub-cycle
 - may require just another fetch (based upon last fetch)
 - might also require arithmetic, like indexing
-![Instruction Cycle with indirect][indirect_cycle.png]
+![[indirect_cycle.png]]
 #### Data Flow
 - Exact sequence depends on CPU design
 - We can indicate sequence in general terms, assuming CPU employs:
@@ -127,7 +127,7 @@ Basic instruction cycle contains the following sub-cycles
 	2. result copied to MBR
 	3. then moved to IR
 - Meanwhile, PC is incremented
-![Data Flow, Fetch Cycle][data_flow_cycle.png]
+![[data_flow_cycle.png]]
 												Fig: Data Flow, Fetch Cycle
 example:
 - t1: MAR <- (PC)
@@ -138,7 +138,7 @@ example:
 - After fetch, control unit examines IR to see if indirect addressing is being used. If so:
 	- Rightmost n bits of MBR (the memory reference) are transferred to MAR
 - Control unit requests a memory read, to get the desired operand address into the MBR.
-![Data Flow, Indirect Cycle | 600][data_flow_indirect.png]
+![[data_flow_indirect.png]]
 * Example:
 	* t1: MAR <- (IR (Address))
 	* t2: MBR <- Memory
@@ -170,24 +170,24 @@ There are three stages in design of ALU:
 	- The basic component of arithmetic ckt is a parallel adder which is constructed with a number of full adder circuits connected in cascade.
 	- By controlling the data inputs to the parallel adder, it is possible to obtain different types of arithmetic operations.
 	- Below figure shows the arithmetic circuit and its functional table.
-	![Arithmetic Example | 650][arithmetic_design.png]
+	![[arithmetic_design.png]]
 2. Design the logical section
 	- The basic components of logical circuit are AND, OR, XOR, and NOT gate circuits connected accordingly. Below figure shows a circuit that generates four basic logic micro-operations.
-	- ![Bock Diagram of Logic Unit | 450][block_logic_unit.png] ![Functional Table | 450][function_logic_unit.png]
+	- ![[block_logic_unit.png]] ![[function_logic_unit.png]]
 	- It consists of four gates and a multiplexer.
 	- Each of four logic operations is generated through a gate that performs the required logic.
 	- The two selection input S1 and S0 choose one of the data inputs of the multiplexer and directs its value to the output.
 	- Functional table lists the logic operations.
 3. Combine these 2 section
 	- Below figure shows a combined circuit of ALU where n data input from A are combined with n data input from B to generate the result of an operation at the G output line.
-	  ![Block Diagram of ALU | 600][block_alu.png]
+	  ![[block_alu.png]]
 	- ALU has a number of selection lines used to determine the operation to be performed.
 	- The selection lines are decoded with the ALU so that selection lines can specify distinct operations.
 	- The mode select S$_2$ differentiate between arithmetic and logical operations.
 	- The two functions select S$_1$ and S$_0$ specify the particular arithmetic and logic operations to be performed.
 	- With three selection lines, it is possible to specify arithmetic operation with S$_2$ at 0 and logical operation with S$_2$ at 1.
 ### 2.2.2 Example of 2-bit ALU (addition, AND, OR, XOR)
-![ALU Example | 600][alu_example.png]
+![[alu_example.png]]
 ## 2.3 Instruction Formats
 - Collection of ordered steps form a computer 'program'. These ordered steps are called instructions.
 - Instructions are stored in central memory locations and are executed sequentially one at a time.
@@ -205,7 +205,7 @@ There are three stages in design of ALU:
 	- An **Operation Code** field that specifies the operation to be performed.
 	- An **Address** field that designates a memory address or a process register
 	- A **Mode** field that specifies the way the operand or the effective address is determined.
-![Instruction Format with mode field | 600][IF_with_mode.png]
+![[IF_with_mode.png]]
 - Opcode of an instruction is a group of bits that define various processor operations such as add, subtract, complement, shift etc.
 - The bits that define the mode field of an instruction code specify a variety of alternatives for choosing the operands from the given address,
 - Operation specified by an instruction is executed on some data stored in the processor register or in the memory location.
@@ -345,7 +345,7 @@ There are three stages in design of ALU:
 * In fact, all register reference instructions that use an accumulator are implied-mode instructions.
 * Adv: no memory reference
 * Disadv: limited operand
-* ![Implied Addressing Mode uses only OpCode | 300][implied.png]
+* ![[implied.png]]
 ### Immediate Addressing mode:
 - The operand is specified in the instruction itself.
 - has an operand field rather than an address field.
@@ -355,14 +355,14 @@ There are three stages in design of ALU:
 - *When the address field specifies a processor register, the instruction is said to be in register mode.*
 - Adv: No memory reference
 - Disadv: limited operand
-- ![Immidate Addressing Mode requires OpCode and operand | 300][immediate.png]
+- ![[immediate.png]]
 ### Register direct addressing
 - The operands are in registers that reside within the CPU.
 - The particular register is selected from the register field in the instruction.
 - Eg: MOV A, B
 - Adv: no memory reference
 - Disadv: limited address space
-- ![Register Direct uses Register address as operand | 350][register_direct.png]
+- ![[register_direct.png]]
 ### Register indirect addressing
 - The instruction specifies a register in CPU whose contents give address of the operand in the memory.
 - The selected register contains the address of the operand rather than the operand itself.
@@ -371,7 +371,7 @@ There are three stages in design of ALU:
 	- Adv: Large address space:
 		- The address field of the instruction uses fewer bits to select a register than would have been required to specify a memory address directly.
 	- Disadv: Extra memory reference
-- ![Register Indirect uses contents of register as address | 360][register_indirect.png]
+- ![[register_indirect.png]]
 ### Auto increment or auto decrement addressing
 - This is similar to register indirect mode except that the register is incremented or decremented after (or before) its value is used to access memory.
 - When the address stored in the registers refers to a table of data in memory, it is necessary to increment or decrement the registers after every access to the table.
@@ -384,20 +384,20 @@ There are three stages in design of ALU:
 - Eg: LDA 4000H
 	- Adv: Simple
 	- Disadv: limited address field
-- ![Direct addressing uses Address to find operand | 370][direct_addressing.png]
+- ![[direct_addressing.png]]
 ### Indirect Addressing Mode
 - The address field of the instruction gives the address where the effective address is stored in memory.
 - Control unit fetches the instruction from the memory and uses its address part to access memory again to read the effective address.
 	- Adv: Flexibility
 	- Disadv: Complexity
-- ![Indirect addressing mode houses address which points to the address of operand | 380][indirect_addressing.png]
+- ![[indirect_addressing.png]]
 ### Displacement Addressing
 - powerful mode of addressing
 - combines capabilities of direct addressing and register indirect addressing
 - address field of instruction is added to the content of specific register in the CPU.
 	- Adv: flexible
 	- Disadv: complexity
-- ![Displacement uses register's value to add to address to get operand | 390][displacement_addressing.png]
+- ![[displacement_addressing.png]]
 ### Relative Addressing mode
 - content of program counter is added to the address part of the instruction in order to obtain the effective address.
 - the address part of the instruction is usually a signed number (+ve/-ve number)
@@ -419,9 +419,9 @@ There are three stages in design of ALU:
 - sometimes, referred to as push down list or LIFO queue.
 - stack pointer (TOS) is maintained in register.
 - address is implicitly used by means of TOS
-- ![Stack uses TOS as EA][stack_addressing.png]
+- ![[stack_addressing.png]]
 ### Examples
-![Numerical Example for Addressing Modes][addressing_examples.png] 
+![[addressing_examples.png]]
 ## RISC and CISC
 
 | S.N. | RISC                                                             | CISC                                                                                              |

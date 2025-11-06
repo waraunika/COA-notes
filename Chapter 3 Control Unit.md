@@ -13,7 +13,7 @@
 	- A main memory
 	- A control memory
 - The general configuration of a micro-programmed control unit is demonstrated in the block diagram:
-  ![Micro-programmed Control Organisation][microprogrammed_control_org.png]
+  ![[microprogrammed_control_org.png]]
 	- The control memory is assumed to be a ROM, within which all control information is permanently stored
 	- The Control Address Register specifies the address of the micro-instruction.
 	- The Control Data Register holds the micro-instruction  read from the memory.
@@ -23,7 +23,7 @@
 - Micro-instructions are stored in control memory in groups, with each group specifying a routine.
 - Each computer instruction has its own micro-program routine memory to generate the micro-operations that execute the instruction.
 - Block diagram of a control memory and the associated hardware needed for selecting the next micro-instruction address.
-  ![Selection of address for control memory][selection_of_address.png]
+  ![[selection_of_address.png]]
 - The micro-instruction in control memory contains
 	- a set of bits to initiate micro-operations in computer registers
 	- other bits to specify the method by which the next address is obtained.
@@ -80,7 +80,7 @@ When the system is powered on, the Control Address Register (CAR) is loaded with
 - Once the configuration of a computer and its micro-programmed control unit is established, the designer's task is to generate the micro-code for the control memory.
 - This microcode generation is called micro-programming.
 - The block diagram of the computer is shown in fig:
-  ![Computer Hardware Configuration][computer_hardware_configuration.png]
+  ![[computer_hardware_configuration.png]]
 - Two memory units
 	- A main memory for storing instructions and data
 	- A control memory for storing the micro-program
@@ -92,16 +92,16 @@ When the system is powered on, the Control Address Register (CAR) is loaded with
 # 3.4 Micro-instruction Format
 ## 3.4.1 Computer Instruction Format
 - The computer instruction format is depicted in fig:
-  ![Computer Instruction Format | 300][computer_instruction_format.png]
+  ![[computer_instruction_format.png]]
 - It consists of three field:
 	- A 1-bit field for indirect addressing symbolised by I
 	- A 4-bit operation code (opcode)
 	- An 11-bit address field
 - The fig lists four of the 16 possible memory-reference instructions.
-- ![Four Computer Instructions][example_IF.png]
+- ![[example_IF.png]]
 ## 3.4.2 Micro-instruction Format
 - The micro-instruction format for the control memory is shown in:
-  ![Microinstruction Format | 400][instruction_format.png]
+  ![[instruction_format.png]]
 - The 20 bits of the micro-instruction are divided into four functional parts
 	- The three fields F1, F2 and F3 specify micro-operations for the computer.
 	- The CD field selects the type of branch.
@@ -110,15 +110,15 @@ When the system is powered on, the Control Address Register (CAR) is loaded with
 #### 3.4.2.1 Micro-operations
 - The three bits in each field are encoded to specify seven distinct micro-operations as listed below:
 - F1:
-  ![F1 Microoperations | 500][f1.png]
-- F1:
-  ![F1 Microoperations | 500][f2.png]
+  ![[f1.png]]
+- F2:
+  ![[f2.png]]
 - F3:
-  ![F1 Microoperations | 500][f3.png]
+  ![[f3.png]]
 - CD:
-  ![F1 Microoperations | 600][CD.png]
+  ![[cd.png]]
 - BR:
-  ![F1 Microoperations | 600][BR.png]
+  ![[br.png]]
 - No more than three micro-operations can be chosen for a micro-instruction, one from each field.
 - If fewer than three micro-operations are used, one or more of the fields will use the binary code 000 for no operation.
 - important to realise: Two or more conflicting micro-operations can not be specified simultaneously. eg: 010 001 000
@@ -175,7 +175,7 @@ When the system is powered on, the Control Address Register (CAR) is loaded with
 	- The Next Address Generator:
 	  *hardware implementation* that uses the micro-instruction fields and inputs like opcode to generate next address according to sequencing logic.
 - Figure:
-    ![Selection of address for control memory][selection_of_address.png]
+    ![[selection_of_address.png]]
 # 3.5 Symbolic Micro-instructions
 - Symbols are used in micro-instructions as in assembly language
 - Simplest and most straightforward way to formulate an assembly language for a micro-program is 
@@ -292,8 +292,7 @@ When the system is powered on, the Control Address Register (CAR) is loaded with
 	2. functional atomic operation of CPU.
 - Hence events of any instruction cycle can be described as a sequence of micro-operations
 - Figure for Program Execution:
-  ![Constituent Elements of Program Execution][control_unit_operations.png]
-
+  ![[control_unit_operations.png]]
 ## 3.7.1 Types of Micro-operation
 - Transfer data between registers
 - Transfer data from register to external interface
@@ -307,7 +306,7 @@ When the system is powered on, the Control Address Register (CAR) is loaded with
 ## 3.7.3 Control Signals
 - CU behaves so, due to its Control Signals.
 - Layout of Control Unit and signals:
-  ![Control Unit and Signals | 600][control_signals.png]
+ ![[control_signals.png]]
 ### 3.7.3a Inputs to Control Unit:
 1. Clock
 	- CU causes one micro-instruction (or set of parallel micro-instructions) per clock cycle
@@ -350,8 +349,7 @@ All these are applied as binary input to individual logic gates.
 	- Need a counter as i/p to control unit with different control signals being used for t1, t2, etc.
 	- At the end of instruction cycle, counter is re-initialised.
 - Control unit with decoded input figure:
-  ![Control Unit with Decoded Input | 500][hardwired_implementation.png]
-
+  ![[hardwired_implementation.png]]
 **Implementation**
 - For each control signal, a Boolean expression of that signal as a function of the inputs is derived.
 - With that the combinational circuit is realised as control unit.
@@ -365,7 +363,7 @@ All these are applied as binary input to individual logic gates.
 - Common in contemporary CISC processors
 - Use sequences of instructions to perform control operations performed by micro operations called micro-programming or firmware.
 - Figure:
-  ![Microprogrammed CU | 550][microprogrammed_cu.png]
+  ![[microprogrammed_cu.png]]
 **Implementation**
 - Set of micro-instructions are stored in control memory
 - Control address register contains the address of the next micro-instruction to be read
@@ -411,7 +409,7 @@ All these are applied as binary input to individual logic gates.
 	- Increases the delay time of the control signals.
 
 - Referring to the figure, we discuss as: 
-  ![Decoding of Micro-operation fields][decoder.png]
+  ![[decoder.png]]
 - Figure shows 3 decoders and some of the connections that must be made from their outputs
 - Outputs 5 OR 6 (5 | 6) of decoder F1 are connected to the load input of AR so that
 	- when either one of these outputs is active;
@@ -428,7 +426,7 @@ All these are applied as binary input to individual logic gates.
 - to guarantee a wide range of acceptability, an integrated circuit sequencer must provide an internal organisation that can be adapted to a wide range of application.
 - The purpose of a micro-program sequencer is to present an address to the control memory so that a micro-instruction may be read and executed.
 - From the figure, we discuss as:
-  ![Microprogram Sequencer for a Control Memory][microprogram.png]
+  ![[microprogram.png]]
 	- The control memory is included to show to interaction between the sequencer and the attached components.
 	- There are two multiplexers in the ckt
 		- 1st: selects an address from 1 of 4 sources and route to CAR

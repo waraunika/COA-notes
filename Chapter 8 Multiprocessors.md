@@ -75,9 +75,9 @@
 - evolution: to reduce bottleneck, a dual-bus structure can be used, where each processor has a local bus and connects to the system bus, via a bridge
 	- this reduces traffic on the main bus
 - single bus system figure:
-  ![Time Shared Common Bus Organisation | 600][time_shared_single_bus.png]
+  ![[time_shared_single_bus.png]]
 - a more economical implementation of a dual bus structure is depicted in the figure below:
-  ![System Bus structure for Multiprocessor | 600][time_shared_local_and_system_bus.png]
+  ![[time_shared_local_and_system_bus.png]]
 ## Multiport Memory
 - concept: a dedicated path is established between each processor and each memory module
 	- the memory controller has multiple ports
@@ -91,7 +91,7 @@
 	- physically bulky due to the large number of cables and connections
 	- difficult to scale; adding a new processor requires adding a port to every memory module
 - Figure for the memory organisation:
-  ![Multiport Memory Organisation | 600][multiport_memory_org.png]
+  ![[multiport_memory_org.png]]
 ## Crossbar Switch
 - concept: a grid of switches that creates a dedicated, non-blocking path between any processor and any memory module
 - analogy: a full telephone switchboard where any incoming line can be connected to any outgoing line without blocking others (as long as the destination is free).
@@ -102,10 +102,10 @@
 - adv: very high bandwidth, non-blocking for distinct memory modules.
 - disadv: the number of crosspoints scales as m x n, making it complex and expensive for large systems (e.g., 64x64 requires 4096 switches)
 - Figure for the functional design switch:
-  ![Crossbar Switch Organisation | 600][crossbar_switch.png]
+  ![[crossbar_switch.png]]
 	- the small square in each crosspoint is a switch that determines that path from a processor to a memory module
 - Block Diagram for the crossbar switch:
-  ![Block Diagram of a crossbar switch | 600][crossbar_block.png]
+  ![[crossbar_block.png]]
 ## Multistage Switching Network
 - concept: 
 	- a compromise between the simple bus and the complex crossbar.
@@ -123,13 +123,13 @@
 - Set up the path -> transfer the address into memory -> transfer the data
 - in a loosely coupled multiprocessor system, both the source and destination are processing elements.
 - concept of the switch is shown below:
-  ![Multistage Switching Network Building Block | 600][multistage_switching_block.png]
+  ![[multistage_switching_block.png]]
 - Using the 2x2 switch as a building block, it is possible to build a multistage network to control the communication between a number of sources and destinations
 	- to see how this is done, consider the binary tree in the figure:
-	  ![Binary tree switched to 101 | 580][tree_101.png]
+	  ![[tree_101.png]]
 	- certain request patterns cannot be satisfied simultaneously. i.e. if P1 -> 000 ~ 011, then P2 -> 100 ~ 111
 	- One such topology is the omega switching network, shown below:
-	  ![8x8 Omega Switching Network | 580][omega_switching_network.png]
+	  ![[omega_switching_network.png]]
 	- certain request patterns cannot be connected simultaneously i.e. any two sources cannot be connected simultaneously to destination 000 and 0001
 ## Hypercube System
 - concept: 
@@ -155,7 +155,7 @@
 - adv: low latency for local communication, highly scalable, no single point of failure
 - disadv: the number of ports per processor grows with n, which can be physically limiting
 - figure below shows the hypercube structure for n=1,2,3:
-  ![Hypercube structures for n = 1, 2, 3 | 600][hypercube_structure_123.png]
+  ![[hypercube_structure_123.png]]
 - a representative of the hypercube architecture is the Intel iPSC computer complex
 	- it consists of 128 (n=7) microcomputers, each node consists of a CPU, a floating-point processor, local memory and serial communication interface units.
 ## Comparision
